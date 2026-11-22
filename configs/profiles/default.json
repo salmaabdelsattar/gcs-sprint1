@@ -1,0 +1,8 @@
+{
+    "name": "default",
+    "controller": "Xbox 360 Controller",
+    "deadzone": 0.12,
+    "axes": { "0": "yaw", "1": "throttle", "3": "roll", "4": "pitch" },
+    "buttons": { "0": "arm", "1": "disarm" },
+    "keys": { "w": "forward", "s": "backward" }
+  }
