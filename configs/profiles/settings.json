@@ -1,0 +1,8 @@
+{
+    "sampling_rate_hz": 50,
+    "deadzone": 0.1,
+    "log_level": "INFO",
+    "log_file": "logs/gcs.log",
+    "profiles_dir": "configs/profiles",
+    "network": { "host": "127.0.0.1", "port": 5760 }
+  }
