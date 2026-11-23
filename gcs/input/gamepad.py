@@ -65,8 +65,13 @@ class Gamepad:
             return None
         import pygame
 
-        pygame.event.pump()
-        return read_state(self._joystick, self.deadzone, self.name)
+        try:
+            pygame.event.pump()
+            return read_state(self._joystick, self.deadzone, self.name)
+        except pygame.error:
+            logger.warning("Controller read failed; treating as disconnected")
+            self._joystick = None
+            return None
 
     def close(self):
         self._joystick = None
