@@ -1,0 +1,18 @@
+[project]
+name = "gcs"
+version = "0.1.0"
+description = "Ground Control Station - Phase 1 headless skeleton"
+requires-python = ">=3.10"
+dependencies = ["pygame-ce"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]

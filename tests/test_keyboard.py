@@ -54,4 +54,3 @@ def test_held_actions_use_profile_mapping():
     kb.process(FakeEvent(pygame.KEYDOWN, pygame.K_s))
     mapping = {"w": "forward", "s": "backward", "x": "unused"}
     assert kb.held_actions(mapping) == {"forward", "backward"}
-    
