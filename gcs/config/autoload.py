@@ -43,7 +43,7 @@ class ProfileAutoLoader:
         logger.info("Auto-loaded profile %s for %s", profile_name, controller)
         self._bus.publish(
             "profile.activated",
-            {"profile": profile_name, "controller": controller},
+            {"profile": profile_name, "controller": controller, "data": profile},
         )
         self._bus.publish(
             "operator.notice",
