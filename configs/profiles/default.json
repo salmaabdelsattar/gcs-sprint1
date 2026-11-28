@@ -1,8 +1,26 @@
 {
-    "name": "default",
-    "controller": "Xbox 360 Controller",
-    "deadzone": 0.12,
-    "axes": { "0": "yaw", "1": "throttle", "3": "roll", "4": "pitch" },
-    "buttons": { "0": "arm", "1": "disarm" },
-    "keys": { "w": "forward", "s": "backward" }
+  "name": "default",
+  "controller": "Xbox 360 Controller",
+  "deadzone": 0.12,
+  "axes": { "0": "sway", "1": "surge", "2": "yaw", "3": "heave" },
+  "invert": ["surge", "heave"],
+  "buttons": {
+    "0": "arm",
+    "1": "disarm",
+    "2": "mode:MANUAL",
+    "3": "mode:ALT_HOLD",
+    "4": "mode:STABILIZE"
+  },
+  "keys": {
+    "w": "surge+",
+    "s": "surge-",
+    "a": "sway-",
+    "d": "sway+",
+    "up": "heave+",
+    "down": "heave-",
+    "q": "yaw-",
+    "e": "yaw+",
+    "f1": "arm",
+    "f2": "disarm"
   }
+}
