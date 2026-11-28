@@ -73,6 +73,9 @@ class TelemetryDecoder:
         if kind == "VFR_HUD":
             altitude = float(msg.alt)
             return self._update({"altitude_m": altitude, "depth_m": -altitude})
+        if kind == "COMMAND_ACK":
+            ack = {"command": int(msg.command), "result": int(msg.result)}
+            return [("link.command_ack", ack)]
         return []
 
     def _update(self, changes):
