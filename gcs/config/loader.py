@@ -13,6 +13,18 @@ DEFAULT_SETTINGS = {
     "log_file": "logs/gcs.log",
     "profiles_dir": "configs/profiles",
     "network": {"host": "127.0.0.1", "port": 5760},
+    "mavlink": {
+        "url": "udpin:0.0.0.0:14550",
+        "heartbeat_timeout_s": 3.0,
+        "control_rate_hz": 20,
+        "input_timeout_s": 0.5,
+        "command_timeout_s": 2.0,
+    },
+    "admin": {
+        "host": "127.0.0.1",
+        "port": 9100,
+        "services": ["bridge", "camera_streamer"],
+    },
 }
 
 
